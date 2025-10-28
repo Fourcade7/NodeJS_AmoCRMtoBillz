@@ -69,6 +69,8 @@ async function newLead(sum,info) {
 
     const result = await response.json();
     console.log("Server javobi:", result);
+    console.log(response.ok);
+    
   }catch(e){
     console.log(e.error)
   }
@@ -115,7 +117,8 @@ async function getData() {
     const response = await fetch(`https://api-admin.billz.ai/v1/transaction-report-table?start_date=${getCurrentFormattedDate()}&page=1&limit=10&shop_ids=cfb91531-9ce8-446c-9be9-80e8130bb480,df254d34-4cef-4622-8541-251166c59605`,{
       method:"GET",
       headers:{
-       "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc1OTczNDI1MiwiaWF0IjoxNzU4NDM4MjUyLCJpZCI6ImRiNjExMDEyLTFjMjgtNGQ2Ny04MTg4LTEyNWUzYjEwMGJlMiIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.xolQcHFvy-IeXAyXgxKw3-Kt4Ii75CxqY14SBWNHKA4",
+       //"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc1OTczNDI1MiwiaWF0IjoxNzU4NDM4MjUyLCJpZCI6ImRiNjExMDEyLTFjMjgtNGQ2Ny04MTg4LTEyNWUzYjEwMGJlMiIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.xolQcHFvy-IeXAyXgxKw3-Kt4Ii75CxqY14SBWNHKA4",
+       "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc2Mjk0MjI3MCwiaWF0IjoxNzYxNjQ2MjcwLCJpZCI6IjJkMDQ4NmJiLWIzYjMtNGZkNS1hNzViLWU2OTM0Mzg5ZGJjZSIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.Pbz9a2FVCGfW0vli8G9-vSlbxE7lka99REqRCE3r-rc",
        "Accept": "application/json"
       }
     });      // GET request
