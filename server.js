@@ -148,7 +148,7 @@ async function getData() {
 
 
     //globalMoment=customer_name;
-    //getPositions(retailDemandId);
+    //getPositions(retailDemandId);d
     
     }else{
       console.log("data null")
