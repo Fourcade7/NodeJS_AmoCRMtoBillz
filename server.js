@@ -69,6 +69,8 @@ async function newLead(sum,info) {
 
     const result = await response.json();
     console.log("Server javobi:", result);
+    console.log(response.ok);
+    
   }catch(e){
     console.log(e.error)
   }
@@ -116,6 +118,10 @@ async function getData() {
       method:"GET",
       headers:{
        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc2NzEwOTM3OCwiaWF0IjoxNzY1ODEzMzc4LCJpZCI6IjdiZTI4ZjhhLTllNmEtNGU4MS05MGExLTM3NjRkOTczNDkzYyIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.Z_ml7gDVicUOOK5XZPUX52RSf_AFWVgHiQ2krVbaeGo",
+
+       //"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc1OTczNDI1MiwiaWF0IjoxNzU4NDM4MjUyLCJpZCI6ImRiNjExMDEyLTFjMjgtNGQ2Ny04MTg4LTEyNWUzYjEwMGJlMiIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.xolQcHFvy-IeXAyXgxKw3-Kt4Ii75CxqY14SBWNHKA4",
+       //"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfcGxhdGZvcm1faWQiOiI3ZDRhNGMzOC1kZDg0LTQ5MDItYjc0NC0wNDg4YjgwYTRjMDEiLCJjb21wYW55X2lkIjoiNGY3ODQzMjItZTU0ZC00MWMzLTk1ZTEtYjc4MzdhMWIzYjIyIiwiZGF0YSI6IiIsImV4cCI6MTc2NTQ1OTc2NywiaWF0IjoxNzY0MTYzNzY3LCJpZCI6IjViODU5NDJkLWFjYTktNDkzOS04ZDRmLTFiYmVhYzIwMzMyZSIsInVzZXJfaWQiOiI3MjY5ZGY5OC1jOGExLTQ3YjgtYmQyNi0zZmQ3YWE5MDE1NmYifQ.KppLKfW7MM0zt8BUiJurJIEiUflLGC0CZ9iITnvKDic",
+
        "Accept": "application/json"
       }
     });      // GET request
